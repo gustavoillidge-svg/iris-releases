@@ -1,4 +1,4 @@
-🚀 Release v0.9-DEMO: "The Gladiator Edition" Pre-release
+🚀 Release v0.0.1-DEMO: "The Gladiator Edition" Pre-release
 Un hito alcanzado: IRIS cobra vida
 Tras años de formación y trabajo intenso en el sector gastronómico, hoy presento con orgullo la primera Demo funcional de IRIS. Este software representa la evolución de mi carrera: la transición de la línea de fuego en la cocina hacia la ingeniería de sistemas aplicada a nuestra profesión.
 
