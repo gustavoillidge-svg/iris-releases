@@ -1,30 +1,62 @@
-🚀 Release v0.0.1-DEMO: "The Gladiator Edition" Pre-release
-Un hito alcanzado: IRIS cobra vida
-Tras años de formación y trabajo intenso en el sector gastronómico, hoy presento con orgullo la primera Demo funcional de IRIS. Este software representa la evolución de mi carrera: la transición de la línea de fuego en la cocina hacia la ingeniería de sistemas aplicada a nuestra profesión.
+# IRIS — Landing page (GitHub Pages)
 
-Reconocimiento y Gratitud
-Este proyecto no habría llegado a esta etapa sin el apoyo de personas excepcionales. Quiero expresar mi más profunda y eterna gratitud a Juan Hoyos ("The Greengo") y a su familia, Camila y Eva.
+Landing page bilingüe (ES/EN) de **IRIS — Insightful Restaurant Intelligence System**,
+el primer proyecto de **Greenhole Insightful Joint Holdings (GIJH)**.
 
-IRIS es posible hoy gracias a ellos. Su confianza incondicional en mi visión y su apoyo en momentos clave han sido el motor fundamental para que este desarrollo sea una realidad. Gracias por creer en mí y por ser parte de la base sobre la cual se construye este sueño.
+- Estática y autocontenida: HTML + CSS + JS vanilla, sin dependencias ni build.
+- Rutas **relativas**: funciona en `usuario.github.io/<repo>`, en la raíz de un
+  `usuario.github.io` o con dominio propio, sin tocar nada.
+- Contenido bilingüe con selector ES/EN (guarda la preferencia en el navegador).
+- Sin datos de contacto ni referencias a terceros.
 
-Novedades en esta versión:
-Arquitectura: Ejecución nativa mediante NeutralinoJS (Zero-Server/Zero-Python).
+## Estructura
 
-Módulo de Importación: Sistema inteligente de carga masiva desde Excel.
+```
+iris-landing/
+├── index.html          ← página completa (secciones + textos base en español)
+├── README.md
+└── assets/
+    ├── styles.css      ← identidad visual (base oscura IRIS + acentos verdes GIJH)
+    ├── main.js         ← selector ES/EN, animaciones, contadores, FAQ
+    └── favicon.svg
+```
 
-Normalización de Unidades: Motor de mapeo automático para estandarización de medidas.
+## Publicar en GitHub Pages
 
-Optimización de Datos: Validación de duplicados de alto rendimiento.
+1. Crea un repositorio nuevo en GitHub (p. ej. `iris-landing`) y súbete el
+   **contenido de esta carpeta** (no la carpeta en sí: `index.html` debe quedar
+   en la raíz del repo).
+   - Desde la web: *Add file → Upload files* y arrastra `index.html`, `README.md`
+     y la carpeta `assets/`.
+   - O por git:
+     ```bash
+     git init
+     git add .
+     git commit -m "Landing de IRIS (primer proyecto GIJH)"
+     git branch -M main
+     git remote add origin https://github.com/<tu-usuario>/iris-landing.git
+     git push -u origin main
+     ```
+2. En el repo: **Settings → Pages**.
+3. En *Build and deployment → Source* elige **Deploy from a branch**.
+4. En *Branch* selecciona `main` y la carpeta `/ (root)`, y guarda.
+5. En 1–2 minutos la página estará en:
+   `https://<tu-usuario>.github.io/iris-landing/`
 
-Interfaz Unificada: Diseño de controles consistente y ayuda contextual (Tooltips) en toda la aplicación.
+> Si tu repo se llama exactamente `<tu-usuario>.github.io`, la URL será la raíz:
+> `https://<tu-usuario>.github.io/`
 
-Instrucciones:
-Descarga el archivo ejecutable adjunto.
+## Cómo editar contenido
 
-Ejecuta el instalador en tu sistema Windows.
+- **Textos visibles (español)**: están en `index.html` y también en el bloque
+  `I18N.es` de `assets/main.js`. Cuando cambies un texto, cámbialo en los dos
+  lugares (el `data-i18n` del HTML debe coincidir con la clave del diccionario).
+- **Textos en inglés**: bloque `I18N.en` de `assets/main.js`.
+- **Colores/estética**: variables al inicio de `assets/styles.css`
+  (`--accent-*` IRIS, `--green` GIJH, etc.).
 
-El programa creará un acceso directo en tu escritorio para un acceso rápido.
+## Estado del contenido
 
-Dedicado a quienes confían en el proceso.
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ef7e3969-e521-4965-8911-ff02f2e8e738" />
+La página declara explícitamente que IRIS está **en construcción** y que GIJH
+tiene **sede en Estados Unidos**. No incluye datos de contacto ni menciones a
+terceros.
